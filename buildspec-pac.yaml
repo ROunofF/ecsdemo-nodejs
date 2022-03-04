@@ -20,7 +20,7 @@ phases:
         fi
       - echo '***** This is the current env:'
       - printenv
-      - sudo apt update && sudo apt install -y kyverno
+      - apt update && apt install -y kyverno
   build:
     commands:
       - echo Build started on `date`
