@@ -30,7 +30,6 @@ phases:
 #      - docker build -t $DOCKER_HUB_USERNAME/$PROJECT_NAME:$IMAGE_TAG .
 #      - docker tag $DOCKER_HUB_USERNAME/$PROJECT_NAME:$IMAGE_TAG $DOCKER_HUB_USERNAME/$PROJECT_NAME:$IMAGE_WORD_TAG
 #      - docker build -f Dockerfile.cdk -t $DOCKER_HUB_USERNAME/$PROJECT_NAME:cdk .
-       - ./kyverno apply policy/ --resource /kubernetes
   post_build:
     commands:
 #      - printf '[{"name":"example-backend","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
