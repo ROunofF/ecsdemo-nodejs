@@ -20,7 +20,8 @@ phases:
         fi
       - echo '***** This is the current env:'
       - printenv
-      - apt update && apt install -y kyverno
+#      - apt update && apt install -y kyverno
+      - curl -fsSL https://github.com/kyverno/kyverno/releases/download/v1.6.1/kyverno-cli_v1.6.1_linux_x86_64.tar.gz | tar zxvf 
   build:
     commands:
       - echo Build started on `date`
